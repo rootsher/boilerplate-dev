@@ -13,11 +13,17 @@
 
 ### Installation and first setup
 
+This command downloads the necessary repositories, 
+installs all dependencies and starts the project:
+
 ```shell
 $ make setup
 ```
 
 ### Development running
+
+If you already have everything downloaded and installed and 
+want to start working with the project - just use the command:
 
 ```shell
 $ make run
