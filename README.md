@@ -40,6 +40,10 @@ $ make run
 
 When services start, go to: [http://project.localhost](http://project.localhost)
 
+## Screenshots
+
+<img src="https://raw.githubusercontent.com/rootsher/boilerplate-dev/master/docs/assets/img/browser.png">
+
 ## Troubleshooting
 
 Show service logs:
