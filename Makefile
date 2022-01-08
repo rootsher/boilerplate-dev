@@ -26,7 +26,7 @@ update-frontend: ## to only update frontend (git, npm)
 	make setup-frontend
 
 setup-frontend: ## to setup only frontend repository
-	$(DC_RUN) frontend npm install
+	$(FRONTEND_RUN) npm install
 
 setup: ## to setup project
 	test -e .env || cp .env.dist .env
