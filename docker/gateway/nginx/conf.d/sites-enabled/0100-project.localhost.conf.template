@@ -1,6 +1,6 @@
 server {
     listen      80;
-    server_name project.localhost www.project.localhost;
+    server_name ${HOST} www.${HOST};
     access_log  /var/log/project.access.log  main;
 
     location / {

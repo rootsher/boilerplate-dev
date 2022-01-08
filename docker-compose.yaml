@@ -4,7 +4,7 @@ services:
     volumes:
       - ./repositories/frontend:/var/www/project/frontend:cached
     environment:
-      - PORT_FRONTEND
+      - PORT=$PORT_FRONTEND
   backend:
     build: docker/backend
     volumes:
@@ -16,8 +16,8 @@ services:
       - backend
     ports:
       - $PORT_NGINX:80
-    environment:
-      - PORT_FRONTEND
+    env_file:
+      - .env
     volumes:
       - ./docker/gateway/nginx/conf.d:/etc/nginx/templates
       - ./docker/gateway/nginx/nginx.conf:/etc/nginx/nginx.conf
@@ -25,4 +25,4 @@ services:
     networks:
       default:
         aliases:
-          - project.localhost
+          - $HOST
