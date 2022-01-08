@@ -1,0 +1,13 @@
+services:
+  frontend:
+    secrets:
+      - source: ssh_key
+        target: /root/.ssh/id_rsa
+      - source: known_hosts
+        target: /root/.ssh/known_hosts
+
+secrets:
+  ssh_key:
+    file: $PRIVATE_KEY_PATH
+  known_hosts:
+    file: $PRIVATE_KNOWN_HOSTS

@@ -1,4 +1,4 @@
-DC ?= docker-compose -f docker-compose.yaml
+DC ?= docker-compose -f docker-compose.yaml -f docker-compose.ssh-key.yaml
 DC_RUN ?= $(DC) run
 DC_EXEC ?= $(DC) exec
 
