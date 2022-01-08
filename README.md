@@ -12,10 +12,16 @@
 
 ## Running
 
+### Clone the `@rootsher/boilerplate-dev` repository
+
+```shell
+$ git clone git@github.com:rootsher/boilerplate-dev.git dev && cd dev
+```
+
 ### Installation and first setup
 
-This command downloads the necessary repositories, 
-installs all dependencies and starts the project:
+This command downloads the necessary nested repositories (frontend, 
+backend etc.), installs all dependencies and starts the project:
 
 ```shell
 $ make setup
