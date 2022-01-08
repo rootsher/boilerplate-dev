@@ -47,3 +47,10 @@ Show service logs:
 ```shell
 $ make docker-compose COMMAND="logs -f [service]"
 ```
+
+## How do you use this in your own project?
+
+1. Fork the `@rootsher/boilerplate-dev` repository
+2. Edit the `Makefile` and set the repositories to your own
+    * frontend (just make sure the http server is on port `:3000`)
+3. Follow the instructions for setup described above
