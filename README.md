@@ -21,6 +21,11 @@ installs all dependencies and starts the project:
 $ make setup
 ```
 
+Next, add this line to the end of `/etc/hosts` (on your host machine):
+```shell
+127.0.0.1   project.local
+```
+
 ### Development running
 
 If you already have everything downloaded and installed and 
