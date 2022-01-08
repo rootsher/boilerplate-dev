@@ -18,3 +18,7 @@ services:
       - ./docker/gateway/nginx/conf.d:/etc/nginx/conf.d
       - ./docker/gateway/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./docker/gateway/nginx/proxy.conf:/etc/nginx/proxy.conf
+    networks:
+      default:
+        aliases:
+          - project.localhost
