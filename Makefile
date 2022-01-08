@@ -32,6 +32,9 @@ setup: ## to setup project
 	test -e .env || cp .env.dist .env
 	test -e repositories/frontend || $(GIT_CLONE)/boilerplate-frontend.git repositories/frontend
 
-	make setup-frontend
+	#make setup-frontend
 
 	make run
+
+	# waiting for frontend http server to be ready
+	#until $(FRONTEND_RUN) ping -c1 127.0.0.1:3000 >/dev/null 2>&1; do echo "frontend starting..."; done

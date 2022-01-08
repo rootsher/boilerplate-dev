@@ -3,6 +3,8 @@ services:
     build: docker/frontend
     volumes:
       - ./repositories/frontend:/var/www/project/frontend:cached
+    environment:
+      - PORT_FRONTEND
   backend:
     build: docker/backend
     volumes:
@@ -13,9 +15,11 @@ services:
       - frontend
       - backend
     ports:
-      - $NGINX_LISTEN:80
+      - $PORT_NGINX:80
+    environment:
+      - PORT_FRONTEND
     volumes:
-      - ./docker/gateway/nginx/conf.d:/etc/nginx/conf.d
+      - ./docker/gateway/nginx/conf.d:/etc/nginx/templates
       - ./docker/gateway/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./docker/gateway/nginx/proxy.conf:/etc/nginx/proxy.conf
     networks:
