@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd repositories/$1
+
+git fetch -p
+git stash
+git rebase origin/$2
