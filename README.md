@@ -5,9 +5,10 @@
 
 ## Requirements
 
-* docker `20.10.8` (build `3967b7d`)
-* docker-compose `1.29.2` (build `5becea4c`)
-* make `3.81`
+* [git](https://git-scm.com/downloads) `2.29.2`
+* [make](https://www.gnu.org/software/make) `3.81`
+* [docker](https://docs.docker.com/engine/install) `20.10.8` (build `3967b7d`)
+* [docker-compose](https://docs.docker.com/compose/install) `1.29.2` (build `5becea4c`)
 
 ## Running
 
