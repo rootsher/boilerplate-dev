@@ -1,3 +1,5 @@
 FROM node:16
 
-CMD tail -f /dev/null
+WORKDIR /var/www/project/backend
+
+CMD npm start

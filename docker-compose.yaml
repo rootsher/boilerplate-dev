@@ -1,19 +1,19 @@
 services:
+  backend:
+    build: docker/backend
+    volumes:
+      - ./repositories/backend:/var/www/project/backend:cached
   frontend:
     build: docker/frontend
     volumes:
       - ./repositories/frontend:/var/www/project/frontend:cached
     environment:
       - PORT=$PORT_FRONTEND
-  backend:
-    build: docker/backend
-    volumes:
-      - ./repositories/backend:/var/www/project/backend:cached
   gateway:
     image: nginx
     depends_on:
-      - frontend
       - backend
+      - frontend
     ports:
       - $PORT_NGINX:80
     env_file:

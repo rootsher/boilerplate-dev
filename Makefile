@@ -2,9 +2,11 @@ DC ?= docker-compose -f docker-compose.yaml -f docker-compose.ssh-key.yaml
 DC_RUN ?= $(DC) run
 DC_EXEC ?= $(DC) exec
 
+BACKEND_RUN ?= $(DC_RUN) backend
 FRONTEND_RUN ?= $(DC_RUN) frontend
 
 GIT_CLONE ?= git clone git@github.com:rootsher
+BRANCH_BACKEND ?= master
 BRANCH_FRONTEND ?= master
 
 default: help
@@ -21,19 +23,28 @@ stop: ## to run docker-compose stop
 docker-compose: ## to run docker-compose command e.g. make docker-compose COMMAND=ps
 	$(DC) $(COMMAND)
 
+update-backend: ## to only update backend (git, npm)
+	bin/command/repository-update backend $(BRANCH_BACKEND)
+	make setup-backend
+
 update-frontend: ## to only update frontend (git, npm)
 	bin/command/repository-update frontend $(BRANCH_FRONTEND)
 	make setup-frontend
+
+setup-backend: ## to setup only backend repository
+	$(BACKEND_RUN) npm install
 
 setup-frontend: ## to setup only frontend repository
 	$(FRONTEND_RUN) npm install
 
 setup: ## to setup project
 	test -e .env || cp .env.dist .env
+	test -e repositories/backend || $(GIT_CLONE)/boilerplate-backend.git repositories/backend
 	test -e repositories/frontend || $(GIT_CLONE)/boilerplate-frontend.git repositories/frontend
 
+	make setup-backend
 	make setup-frontend
 
 	make run
 
-	#TODO: wait for frontend http server to be ready
+	#TODO: wait for frontend and backend http server to be ready

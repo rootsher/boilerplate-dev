@@ -1,4 +1,10 @@
 services:
+  backend:
+    secrets:
+      - source: ssh_key
+        target: /root/.ssh/id_rsa
+      - source: known_hosts
+        target: /root/.ssh/known_hosts
   frontend:
     secrets:
       - source: ssh_key
