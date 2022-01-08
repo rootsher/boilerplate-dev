@@ -11,7 +11,7 @@
 
 ## Running
 
-### Installation and first running
+### Installation and first setup
 
 ```shell
 $ make setup
@@ -25,4 +25,12 @@ $ make run
 
 ### Host availability
 
-After services start - go to [http://project.local](http://project.local)
+When services start, go to: [http://project.local](http://project.local)
+
+## Troubleshooting
+
+Show service logs:
+
+```shell
+$ make docker-compose COMMAND="logs -f [service]"
+```
