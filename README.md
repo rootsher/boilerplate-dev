@@ -38,7 +38,10 @@ $ make run
 
 ### Host availability
 
-When services start, go to: [http://project.localhost](http://project.localhost)
+When services start, go to:
+
+* [http://project.localhost](http://project.localhost) (frontend)
+* [http://project.localhost/api](http://project.localhost/api) (backend)
 
 ## Screenshots
 

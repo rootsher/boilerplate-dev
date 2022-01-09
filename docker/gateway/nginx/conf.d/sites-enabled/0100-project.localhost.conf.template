@@ -3,6 +3,10 @@ server {
     server_name ${HOST} www.${HOST};
     access_log  /var/log/project.access.log  main;
 
+    location ~ ^(/api) {
+        proxy_pass  http://backend:${PORT_BACKEND};
+    }
+
     location / {
         proxy_pass  http://frontend:${PORT_FRONTEND};
     }

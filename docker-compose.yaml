@@ -3,6 +3,8 @@ services:
     build: docker/backend
     volumes:
       - ./repositories/backend:/var/www/project/backend:cached
+    environment:
+      - PORT=$PORT_BACKEND
   frontend:
     build: docker/frontend
     volumes:
