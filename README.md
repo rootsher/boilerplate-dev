@@ -66,3 +66,10 @@ $ make docker-compose COMMAND="logs -f [service]"
 1. Fork the `@rootsher/boilerplate-dev` repository
 2. Edit the `Makefile` and set the repositories to your own
 3. Follow the instructions for setup described above
+
+## This is a series of related projects
+
+* [https://github.com/rootsher/boilerplate-dev](https://github.com/rootsher/boilerplate-dev)
+* [https://github.com/rootsher/boilerplate-frontend](https://github.com/rootsher/boilerplate-frontend)
+* [https://github.com/rootsher/boilerplate-backend](https://github.com/rootsher/boilerplate-backend)
+* [https://github.com/rootsher/boilerplate-infrastructure](https://github.com/rootsher/boilerplate-infrastructure)
