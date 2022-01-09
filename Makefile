@@ -37,6 +37,9 @@ setup-backend: ## to setup only backend repository
 setup-frontend: ## to setup only frontend repository
 	$(FRONTEND_RUN) npm install
 
+database-migrate: ## to only run migrations
+	$(BACKEND_RUN) npm run migration:run
+
 setup: ## to setup project
 	test -e .env || cp .env.dist .env
 	test -e repositories/backend || $(GIT_CLONE)/boilerplate-backend.git repositories/backend

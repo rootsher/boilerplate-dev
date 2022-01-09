@@ -43,6 +43,12 @@ When services start, go to:
 * [http://project.localhost](http://project.localhost) (frontend)
 * [http://project.localhost/api](http://project.localhost/api) (backend)
 
+### Available services
+
+* frontend ([React](https://reactjs.org) + [CRA](https://create-react-app.dev))
+* backend ([Node.js](https://nodejs.org) + [NestJS](https://nestjs.com))
+* database ([MySQL](https://www.mysql.com)), also available on host machine
+
 ## Screenshots
 
 <img src="https://raw.githubusercontent.com/rootsher/boilerplate-dev/master/docs/assets/img/browser.png">
