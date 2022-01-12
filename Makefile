@@ -14,11 +14,11 @@ default: help
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?##.*$$' $(MAKEFILE_LIST) | awk '{split($$0, a, ":"); printf "\033[36m%-30s\033[0m %-30s %s\n", a[1], a[2], a[3]}'
 
-run: ## to run docker-compose up -d
+up: ## to run docker-compose up -d
 	$(DC) up -d
 
-stop: ## to run docker-compose stop
-	$(DC) stop
+down: ## to run docker-compose stop
+	$(DC) down
 
 docker-compose: ## to run docker-compose command e.g. make docker-compose COMMAND=ps
 	$(DC) $(COMMAND)

@@ -22,7 +22,7 @@ services:
     environment:
       - PORT=$PORT_FRONTEND
   gateway:
-    image: nginx
+    build: docker/gateway
     depends_on:
       - backend
       - frontend
