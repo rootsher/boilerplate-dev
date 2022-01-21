@@ -17,7 +17,7 @@ help:
 up: ## to run docker-compose up -d
 	$(DC) up -d
 
-down: ## to run docker-compose stop
+down: ## to run docker-compose down
 	$(DC) down
 
 docker-compose: ## to run docker-compose command e.g. make docker-compose COMMAND=ps
