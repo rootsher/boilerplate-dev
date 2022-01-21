@@ -3,6 +3,21 @@
 [![GitHub issues](https://img.shields.io/github/issues/rootsher/boilerplate-dev.svg)](https://github.com/rootsher/boilerplate-dev/issues)
 [![GitHub PRs](https://img.shields.io/github/issues-pr/rootsher/boilerplate-dev.svg)](https://github.com/rootsher/boilerplate-dev/pulls)
 
+## Why would I need to use it?
+
+The premise of the project is that you are working on a web project where 
+you have at least a **front-end** and **back-end** layer.
+
+If you answered **yes** to any of the following questions - I think you should try using this project.
+
+* do you lose a lot of time when setting up a new project?
+* are you looking for a solution that sets up your development environment with a single command?
+* are you installing everything on the host machine? (you don't use containerization)
+* would you like to have a development environment that is independent of the host machine?
+* are you using containerization but not satisfied with your setup?
+* do you need an environment where you can easily add a new service on the same network?
+* would you like to have a development environment that you can comfortably customize to your needs?
+
 ## Requirements
 
 * [git](https://git-scm.com/downloads) `2.29.2`
@@ -12,7 +27,7 @@
 
 ## Running
 
-### Clone the `@rootsher/boilerplate-dev` repository
+### Clone (or fork) the `@rootsher/boilerplate-dev` repository
 
 ```shell
 $ git clone git@github.com:rootsher/boilerplate-dev.git dev && cd dev
