@@ -3,17 +3,18 @@
 [![GitHub issues](https://img.shields.io/github/issues/rootsher/boilerplate-dev.svg)](https://github.com/rootsher/boilerplate-dev/issues)
 [![GitHub PRs](https://img.shields.io/github/issues-pr/rootsher/boilerplate-dev.svg)](https://github.com/rootsher/boilerplate-dev/pulls)
 
-## Why would I need to use it?
+## Why would you need to use it?
 
 The premise of the project is that you are working on a web application where 
 you have at least a **front-end** and **back-end** layer.
 
 If you answered **yes** to any of the following questions - I think you should try using this project.
 
-* do you lose a lot of time when setting up a new project (creating new application)?
+* do you lose a lot of time when setting up a new project (creating environment for a newly created application)?
 * are you looking for a solution that sets up your development environment with a single command?
 * are you installing everything on the host machine? (you don't use containerization)
 * would you like to have a development environment that is independent of the host machine?
+* do you want to work as part of a team and not have a problem with the local environment?
 * are you using containerization but not satisfied with your setup?
 * do you need an environment where you can easily add a new service on the same network?
 * would you like to have a development environment that you can comfortably customize to your needs?
