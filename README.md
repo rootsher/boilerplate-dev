@@ -48,7 +48,7 @@ If you already have everything downloaded and installed and
 want to start working with the project - just use the command:
 
 ```shell
-$ make run
+$ make up
 ```
 
 ### Host availability

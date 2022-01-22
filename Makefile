@@ -48,6 +48,6 @@ setup: ## to setup project
 	make setup-backend
 	make setup-frontend
 
-	make run
+	make up
 
 	#TODO: wait for frontend and backend http server to be ready
