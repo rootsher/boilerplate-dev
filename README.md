@@ -83,6 +83,15 @@ $ make docker-compose COMMAND="logs -f [service]"
 2. Edit the `Makefile` and set the repositories to your own
 3. Follow the instructions for setup described above
 
+## Working with CI (GitHub Actions)
+
+Before working with CI - make sure you have a production environment ready.
+In addition to the production infrastructure itself, you should have a private key
+uploaded to `boilerplate-frontend` and `boilerplate-backend` repositories 
+to communicate with the artifact registry.
+
+For more details, see [boilerplate-infrastructure](https://github.com/rootsher/boilerplate-infrastructure).
+
 ## This is a series of related projects
 
 * [https://github.com/rootsher/boilerplate-dev](https://github.com/rootsher/boilerplate-dev)
