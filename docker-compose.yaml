@@ -1,6 +1,8 @@
 services:
   backend:
-    build: docker/backend
+    build:
+      context: repositories/backend
+      target: dev
     depends_on:
       - mysql
     volumes:
@@ -16,7 +18,9 @@ services:
     volumes:
       - ./data/mysql:/var/lib/mysql
   frontend:
-    build: docker/frontend
+    build:
+      context: repositories/frontend
+      target: dev
     volumes:
       - ./repositories/frontend:/var/www/project/frontend:cached
     environment:
