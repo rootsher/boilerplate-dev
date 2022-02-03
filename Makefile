@@ -31,6 +31,10 @@ update-frontend: ## to only update frontend (git, npm)
 	bin/command/repository-update frontend $(BRANCH_FRONTEND)
 	make setup-frontend
 
+update: ## to update all services (git, dependencies etc.)
+	make update-frontend
+	make update-backend
+
 setup-backend: ## to setup only backend repository
 	$(BACKEND_RUN) npm install
 
